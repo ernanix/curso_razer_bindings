@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./binding-uni.component.css']
 })
 export class BindingUniComponent implements OnInit {
-
+  private nome: string = "Ernani";
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get meunome(): string {
+    return this.nome;
+  }
+
+  public getValor (): number {
+    return 10 + 40;
   }
 
 }

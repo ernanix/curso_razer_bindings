@@ -1,1 +1,19 @@
-<p>binding-uni works!</p>
+<h3>Interpolação</h3>
+<p>
+  Apresenta um dado do componente no HTML<br>
+  Ex.: <i>{{meunome}}</i> veio lá do componente - É um atributo privado com um get() específico<br>
+  Ex2.: {{40+10}} é uma soma feita diretamente<br>
+  Ex3.: {{getValor()}} é uma soma feita em método do componente
+</p>
+
+<label> Digite algo:
+  <input #entrada>{{entrada.value}}
+</label>
+
+<input [value] = "entrada.value">
+<input value = {{meunome}}>
+
+<p>
+  Value: {{entrada.value}}
+</p>
+
