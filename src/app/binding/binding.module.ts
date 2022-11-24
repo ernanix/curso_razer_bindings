@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BindingUniComponent } from './binding-uni/binding-uni.component';
 import { BindingBiComponent } from './binding-bi/binding-bi.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { BindingBiComponent } from './binding-bi/binding-bi.component';
     BindingBiComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     BindingUniComponent,

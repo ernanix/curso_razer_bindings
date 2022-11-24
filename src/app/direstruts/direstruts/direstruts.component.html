@@ -1,0 +1,13 @@
+<h3>Diretivas Estruturais</h3>
+
+<div *ngIf="mostrar">Texto para mostrar</div>
+
+<div *ngFor="let cor of getListaCores">
+    <span [style.color]="cor">{{cor}}</span>
+</div>
+
+<ul [ngSwitch]="superhero">
+    <li *ngSwitchCase="'Groot'">Groot</li>
+    <li *ngSwitchCase="'Batman'">Batman</li>
+    <li *ngSwitchDefault>Tony Tornado</li>
+</ul>

@@ -6,14 +6,21 @@
   Ex3.: {{getValor()}} é uma soma feita em método do componente
 </p>
 
-<label> Digite algo:
-  <input #entrada>{{entrada.value}}
-</label>
+<input [value] = "alunos.length">
 
-<input [value] = "entrada.value">
-<input value = {{meunome}}>
+<ul>
+  <li *ngFor="let aluno of alunos"> {{aluno.nomeAluno}} </li>
+</ul>
 
-<p>
-  Value: {{entrada.value}}
-</p>
+<h3>Binding de Propriedade</h3>
 
+<span [style.color]="cor">Texto em {{cor}} </span>
+<span [innerHTML]="html"></span>
+
+<h3>Binding de Evento</h3>
+
+<input #nuevoNome>
+<button (click)="mudaNome(nuevoNome.value)">Muda nome!</button>
+
+<button type="button" (click)="evento($event)">Evento</button>
+{{getevent}}

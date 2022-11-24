@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./binding-bi.component.css']
 })
 export class BindingBiComponent implements OnInit {
-  public condition: boolean = true;
+  public nome: string = "";
   constructor() { }
 
   ngOnInit(): void {

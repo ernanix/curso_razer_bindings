@@ -1,0 +1,20 @@
+<h3>Template Reference Variable</h3>
+
+<form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
+    <label for="nome">Nome:
+        <input class="form-control" name="nome" ngModel required />
+    </label>
+    <button type="submit" [disabled]="meuForm.form.invalid"> Salvar </button>
+</form>
+
+<div [hidden]="!meuForm.form.invalid">
+    <p>{{errorMessage}}</p>
+</div>
+
+<div [hidden]="meuForm.form.invalid || nome != '' ">
+    <p>Digitando nome</p>
+</div>
+
+<div [hidden]="meuForm.form.invalid || nome == '' ">
+    <p>Nome digitado: {{nome}}</p>
+</div>
